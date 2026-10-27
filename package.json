@@ -1,0 +1,38 @@
+{
+  "name": "pptist-player",
+  "version": "1.0.0",
+  "description": "Zero-dependency, ultra-lightweight standalone presentation player and offline HTML generator for PPTist AST.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pptist-player": "./bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "template"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm,iife --dts --global-name PPTistPlayer --minify",
+    "dev": "tsup src/index.ts --format cjs,esm,iife --watch",
+    "test": "node test/verify.js"
+  },
+  "keywords": [
+    "pptist",
+    "presentation",
+    "slides",
+    "player",
+    "viewer",
+    "offline-presentation",
+    "zero-dependency",
+    "ast",
+    "svg"
+  ],
+  "author": "keche",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  }
+}
